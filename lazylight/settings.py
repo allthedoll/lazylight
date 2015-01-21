@@ -58,3 +58,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = "/static/"
+
+
+BROKER_URL = config.get("celery", "broker_url")
+CELERY_RESULT_BACKEND = config.get("celery", "result_backend")
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_INCLUDE = ["lazylight.hardware_controller"]
