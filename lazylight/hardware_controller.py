@@ -1,0 +1,2 @@
+def ToggleRelay(relay):
+  True
