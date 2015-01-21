@@ -9,6 +9,7 @@ class Relay(Model):
   name = CharField(default="Relay", max_length=255)
   socket = IntegerField(unique=True)
   channel = IntegerField(unique=True)
+  actuated = BooleanField(default=False)
 
   class Meta:
     db_table = "relay"
