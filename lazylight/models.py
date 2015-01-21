@@ -7,6 +7,7 @@ from django.db.models import IntegerField
 
 class Relay(Model):
   name = CharField(default="Relay", max_length=255)
+  socket = IntegerField(unique=True)
   channel = IntegerField(unique=True)
 
   class Meta:
