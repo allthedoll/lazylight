@@ -5,5 +5,9 @@ from lazylight.hardware_controller import ToggleRelay
 
 
 def index(request):
-  ToggleRelay.delay(relay="")
   return render(request, "index.html")
+
+
+def toggle_relay(request):
+  ToggleRelay.delay(request.POST.get("socket"))
+  return HttpResponse("Submitted.")
