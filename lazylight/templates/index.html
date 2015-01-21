@@ -12,9 +12,8 @@
     <script>{% include "index.js" %}</script>
   </head>
   <body>
-    <button class="socket-1">Foo 1</button>
-    <button class="socket-2">Foo 2</button>
-    <button class="socket-3">Foo 3</button>
-    <button class="socket-4">Foo 4</button>
+    {% for relay in relays %}
+      <button class="socket-{{ relay.socket }}">{{ relay.name }}</button>
+    {% endfor %}
   </body>
 </html>

@@ -3,9 +3,11 @@ from django.http import HttpResponse
 
 from lazylight.hardware_controller import ToggleRelay
 
+from lazylight.models import Relay
+
 
 def index(request):
-  return render(request, "index.html")
+  return render(request, "index.html", {"relays": Relay.objects.all()})
 
 
 def toggle_relay(request):
