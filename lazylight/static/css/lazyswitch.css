@@ -1,0 +1,7 @@
+button[id^="socket-"].off {
+  background-color: red;
+}
+
+button[id^="socket-"].on {
+  background-color: green;
+}
