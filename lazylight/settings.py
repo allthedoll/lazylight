@@ -20,8 +20,14 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     "lazylight",
     "jquery",
+    "omnibus",
     "django.contrib.staticfiles",
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "omnibus.context_processors.omnibus",
+)
+
 
 MIDDLEWARE_CLASSES = ()
 

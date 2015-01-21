@@ -1,1 +1,4 @@
-console.log("Hello World!");
+var omnibusConnection = new Omnibus(
+  WebSocket,
+  "{{ OMNIBUS_ENDPOINT }}"
+);
