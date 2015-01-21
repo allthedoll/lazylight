@@ -1,0 +1,9 @@
+[database]
+host = localhost
+port = 3306
+name = lazylight
+user = lazylight
+password = hackme
+
+[django]
+secret_key = hackme
