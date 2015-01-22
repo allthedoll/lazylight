@@ -11,5 +11,5 @@ def index(request):
 
 
 def toggle_relay(request):
-  ToggleRelay.delay(request.POST.get("socket"))
+  ToggleRelay.delay(request.POST)
   return HttpResponse("Submitted.")

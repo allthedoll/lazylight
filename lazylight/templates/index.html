@@ -10,14 +10,14 @@
     <script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
     <script type="text/javascript"
         src="{% static "omnibus/omnibus.min.js" %}"></script>
-    <script>{% include "index.js" %}</script>
   </head>
   <body>
     {% for relay in relays %}
-      <button id="relay-{{ relay.pk }}"
-          class="relay-{% if relay.actuated %}on{% else %}off{% endif %}">
+      <button id="relay-{{ relay.pk }}" class="relay-button
+          relay-{% if relay.actuated %}on{% else %}off{% endif %}">
         {{ relay.name }}
       </button>
     {% endfor %}
   </body>
+  <script>{% include "index.js" %}</script>
 </html>
