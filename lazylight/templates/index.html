@@ -14,8 +14,8 @@
   </head>
   <body>
     {% for relay in relays %}
-      <button id="socket-{{ relay.socket }}"
-          class="{% if relay.actuated %}on{% else %}off{% endif %}">
+      <button id="relay-{{ relay.pk }}"
+          class="relay-{% if relay.actuated %}on{% else %}off{% endif %}">
         {{ relay.name }}
       </button>
     {% endfor %}

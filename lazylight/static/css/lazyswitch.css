@@ -1,7 +1,7 @@
-button[id^="socket-"].off {
+.relay-off {
   background-color: red;
 }
 
-button[id^="socket-"].on {
+.relay-on {
   background-color: green;
 }
